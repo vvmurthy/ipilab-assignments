@@ -24,7 +24,8 @@ You will need 3 major components on your computer set up by the end of this assi
 coordinate software development across large teams. However here, we are 
 just going to use it to give you access to your assignments. Sign up 
 for GitHub using this [link](https://github.com/signup/free) using either 
-a school or a personal email account, then give me your username. 
+a school or a personal email account, then give me your username. If
+prompted by GitHub, select the free plan option.
 Once you give me your username, go to this 
 [link](https://github.com/vvmurthy/ipilab-assignments), and click on 
 the button that says `Clone or Download`. Download the zip file, and 
