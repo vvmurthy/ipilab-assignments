@@ -55,9 +55,16 @@ For windows you will want to download the .exe file. Default install
 location is fine, you should click the box for a 64-bit launcher,
 and click on the box to create the `.java` association. 
 
-Once downloaded, go to `File->Open`, then open the 
-downloaded and extracted folder.  
+You will then need to import the downloaded `ipilab-assignments` folder
+into IntelliJ. To do this, first extract the zipped `ipilab-assignments`
+folder. Then, in IntelliJ, go to `file->new->project from existing sources`.
+Navigate to the extracted `ipilab-assignments` folder, and click on 
+the file inside the folder that says `build.gradle`. You do not need
+to change any of the default settings if it asks you for import settings.
+Once imported, it may take a few minutes for the `ipilab-assignments`
+folder to be set up. 
 
+Once the `ipilab-assigments` folder is set up, 
 You should be greeted with several subfolders, including one called `src`.
 `src` has two subfolders- `main` and `test`.
 
