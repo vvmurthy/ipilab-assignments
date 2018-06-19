@@ -61,23 +61,15 @@ round a decimal value to the nearest integer. Go to `src/test/java/assignment1`
 and open the file `TestRounding.java`, and fill and example for which
 `BadRound` fails in `TestBadRound`.
 
-*Extra Notes*: My `BadRound` function uses a technique called casting. This is
-where we directly convert one type of variable to another. 
+`TestBadRound` should fail as a unit test- your `n` value and its corresponding
+`expectedOutput` should be correct mathematically though.
+For example, if you set `n` (the input to `BadRound`) as 4.3, then set the 
+`expectedOutput` to 5, this would be an incorrect solution to this problem, 
+because mathematically we know that `expectedOutput` should be 4.
 
-Consider the opposite of what my function does:
-
-```java
-int assignment3 = 10;
-double x = (double)assignment3;
-``` 
-
-here, assignment3 has the value of `10`. `x` would have the value of `10.0`. The
-difference is that we use a different type of variable to store the 
-same information. Here, while `double` has the capability of storing
-a decimal value, it's ok to store an integer in it as the decimal 
-will just be treated as 0. 
-
-However, my function goes the opposite direction- `double` to `int`.
+You need not fix `BadRound` once you identify an input / output for which
+it fails as later on you will be writing your own rounding function (which
+will work)
 
 *Hints*: Try my function with different inputs. How does it perform on 1.0?
 1.1? 1.5?. 
