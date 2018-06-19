@@ -26,6 +26,7 @@ just going to use it to give you access to your assignments. Sign up
 for GitHub using this [link](https://github.com/signup/free) using either 
 a school or a personal email account, then give me your username. If
 prompted by GitHub, select the free plan option.
+
 Once you give me your username, go to this 
 [link](https://github.com/vvmurthy/ipilab-assignments), and click on 
 the button that says `Clone or Download`. Download the zip file, and 
@@ -43,7 +44,6 @@ You will most likely want to download the windows x64 version (or the MAC x64 ve
 and install as
 necessary. I specify Java 1.8 because if you do complete this course
 and become a member of my project team, my software uses Java 1.8.
-
 
 For IDE, we use [IntelliJ IDEA](https://www.jetbrains.com/idea/) because it 
 allows us to easily test code, and because it is similar to a lot 
@@ -63,6 +63,16 @@ the file inside the folder that says `build.gradle`. You do not need
 to change any of the default settings if it asks you for import settings.
 Once imported, it may take a few minutes for the `ipilab-assignments`
 folder to be set up. 
+
+*Note*: Once `ipilab-assigments` folder has been imported, 
+you still may not be able to run any files. If this happens 
+to you, you may need to set up the project SDK. This is a notification
+you may see on the top of the panel where you are writing your code.
+
+Click `Setup Project SDK`, then click on `Configure`. Click the green
+plus sign, then navigate to `C:\Program Files\Java\jdk-1.8.{something here}\` and
+click on the folder that says JDK 1.8.{something}. This will set up IntelliJ to
+use the java that you just downloaded. 
 
 Once the `ipilab-assigments` folder is set up, 
 You should be greeted with several subfolders, including one called `src`.
