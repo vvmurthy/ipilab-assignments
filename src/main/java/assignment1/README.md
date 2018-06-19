@@ -69,10 +69,22 @@ because mathematically we know that `expectedOutput` should be 4.
 
 You need not fix `BadRound` once you identify an input / output for which
 it fails as later on you will be writing your own rounding function (which
-will work)
+will work). You also need not change the inputs for any other function
+besides `TestBadRound`- those inputs you will need later on when you
+write your own rounding function.
 
-*Hints*: Try my function with different inputs. How does it perform on 1.0?
-1.1? 1.5?. 
+*Hints*: Try my function with different inputs. As you try different inputs,
+you want to make sure to think about the cases that rounding can fall into.
+
+First, we can have positive values (1, 2.6, 6.2 as examples), or negative
+values (-1.0, -3.2, -6.7 as examples), and zero. Next, within each category
+of positive and negative values, we will have numbers which round up
+(2.6 will round up to 3) and numbers which will round down (0.1 will round
+down to 0). If you are getting stuck, make sure the numbers you try are
+not all in the same category. For example, do not try 0.1, 0.2, so on
+in a row, because they are all positive values which round down. Instead,
+maybe try combinations such as 0.1, 0.8, etc, where each number falls into
+a different category.
 
 **ON COMPLETION:** Once you have found a number for which my `BadRound`
 function fails to generate the correct output, show me.
