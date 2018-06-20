@@ -146,9 +146,11 @@ double grayValue = ...(something here);
 int round = Rounding.YourGoodRound(grayValue);
 ```
 
-2) Remember that while `int` can store very large numbers, we only
-want valid values between `0` and `255`. So we will need an if statement
-(or two, or three...) to check if the RGB components are valid.
+2) Remember that while `int` can store very large numbers, we define
+that a set of RGB values are valid if each of the R, G, and B values
+is between `0` and `255`, inclusive. So your code should use an if statement
+(or two, or three...) to check if the R value, G value and B value are within
+the valid [0, 255] range.
 
 3) Remember that java uses integer division. This is different from the 
 division in your math classes:
