@@ -1,4 +1,144 @@
-## Assignment 1: Loops, Conditionals, Unit Tests, Documentation
+## Assignment 1: Java Syntax, Loops, Conditionals, Unit Tests, Documentation
+
+### Step 0: Java Syntax
+
+Read the following sections, and answer the practice questions at the end of the section. When you have answers to the practice questions, let me know so I can check your answers. 
+
+#### How Java Actually Runs your Code
+
+Section adapted from [This link](http://www.cs.cmu.edu/~jcarroll/15-100-s05/supps/basics/history.html).
+
+Java programs on their own are not able to be run by a computer. They must first be compiled into a language the computer can understand directly, but that would be very difficult for humans to understand. This process is called *compilation*.
+
+First, when you click `Run Program` in IntelliJ, Java compiles your functions (from various `.java` files in the assignment folders into something called Java bytecode. Bytecode files have the extension `.class`, and these `.class` files can be run by Java as needed.  
+
+Because of this, two sorts of errors can occur in Java code. Compilation Errors occur if your code cannot compile (and thus cannot be run), and Runtime Errors occur if your code can run, but an error occurs while your program is running. Below, we will learn about why compilation errors occur. 
+
+#### Syntax in Java
+
+A java function consists of several lines of code which form the function. Each of these lines must adhere strictly to a set of rules determining what is and what isn't valid java code. These rules, on how Java programs should be structured, are called syntax rules. 
+
+There are a lot of syntax rules in the Java programming language. The main ones you will encounter in this assignment are as follows:
+
+1) Most statements must end in a semicolon. The only exception to this is if statements, loops, function declarations, and brackets.
+
+Consider the function
+```
+public static void printTenEvenNumbers(){ // function declaration, no semicolon
+	for(int i = 0 ; i < 20 ; i++){ // loop, no semicolon
+		if( i % 2 == 0){ // if statement, no semicolon
+			System.out.println(i); // statement + semicolon
+		} // bracket, no semicolon
+	} // bracket, no semicolon
+} // bracket, no semicolon
+```
+
+Here, the only line we needed a semicolon for was our one `print` statement. Typically, if you use a variable, or make a call to another function, you will need a semicolon at the end of the line.
+
+2) Every opening parenthesis must have a closing parenthesis. Every opening bracket must have a closing bracket.
+For example
+```
+// Invalid code, no closing bracket
+if(x == 2){
+	System.out.println(x);
+``` 
+
+```
+// invalid code, parenthesis in if statement are unbalanced
+if((y == 2) && (x == 3){
+	System.out.println("Y: " + y);
+}
+```
+
+3) Every function which returns a value (called a `non-void` function in the Java language), must return a variable of that type
+
+In order to tell if a function is non-void, we look at the function declaration at the start of each function. For example, consider the function
+```
+public static int main(){
+	return 0;
+}
+```
+
+Here, we can tell from the third keyword, `int`, that this function `main`, returns a value of type integer. If the function was something like:
+```
+public void doSomething(){
+}
+```
+
+Then, based on the keyword, we would know the function `doSomething()` does not return any values. 
+
+Previously, we mentioned how Java first must compile your code. We defined compilation as converting your code into a set of instructions readable by the computer. However, when Java compiles your code, it is also checking your code and whether it follows the syntax rules of the Java Programming Language. Any errors in
+syntax of a Java function are called "Compilation Errors".
+
+
+
+#### Common Errors in Your Programs
+
+* `) expected` -> Typically, this means you have unbalanced parenthesis somewhere in your function. Look at which file the error occurs in, then look for opening parenthesis that may not be matched with a closing parenthesis.
+* `; expected` -> You forgot a semicolon on the specified line
+* `missing return statement` -> a `non-void` function does not return a value at the end of the function. If the function does not have a `void` keyword in its declaration, you must return a value of the type specified in the function declaration. Sometimes, this will occur if you have a function structured as follows:
+```
+public static void isEven(int n){
+	if(n % 2 == 0){
+		return true;
+	}
+	if(n % 2 == 1){
+		return false;
+	}
+}
+```
+Here, we know mathematically, that `n` must be either even (first if statement) or odd (second if statement). However, the computer does not know that. So, we would need to add a line `return false;` or `return true;` at the end of the function 
+so that our code follows Java syntax, even if that extra `return` statement will never be reached. 
+* `noClassDefFound` -> This *most likely* means that your code is suffering from compilation errors, and thus Java cannot find the compiled code relating to your function. This also usually occurs when you are trying to run a test function, to test a function that you have written. To check if this is happening in your code, go to `build->rebuild code` in IntelliJ. Look at the bottom tile, under where you write your code within IntelliJ. If this panel has many red x marks, followed by filenames and line numbers, your code is suffering from compilation issues. 
+
+This issue occurs because the compiling of the test function, and of the main function you want to test occurs separately. So if the test code compiles, but the main code doesn't, then this error can occur. 
+
+**Super important Note**: If a function you do not want to test at the moment is causing compilation errors, it is best to comment out the function. You can do this as follows
+```
+public static int functionIDontWantToRun(){
+	/** add this symbol above code you want to comment out
+
+	*/ //add this symbol below code you want to  comment out
+	
+	return 0; // Add some return at end of function to
+			  // pass compilation	
+}
+```
+
+#### Practice
+
+1) What is wrong with this function (there are multiple errors in the function)
+```
+public static void main doSomething(){
+	int x = 2;
+	int y = 3;
+	if((x == 2) && (y == 3){
+		System.out.println(x);
+	}
+	return 0; 
+}
+```
+
+2) What is wrong with this function (there are multiple errors in the function)
+```
+public static int doSomething(int x, int y){
+	if((x == 2) && (y == 3)){
+		System.out.println(x);
+		return 0; 
+	}
+```
+
+3)**challenge** What is wrong with this function (there is a lot wrong with this function)
+```
+public static boolean doSomething(){
+	if(something){
+		boolean anotherBoolean = Function.doSomethingElse(something)
+	}else if(){
+		boolean anotherBoolean = true;
+	}
+	return -1; 
+}
+```
 
 ### Step 1
 
