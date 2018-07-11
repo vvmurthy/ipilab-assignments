@@ -390,3 +390,114 @@ All tests should pass. Show me that they do.
 (Note- do not try to cheat the system by using several if statements designed
 so that it only works on my tests, but not on other numbers. I will catch
 on :( )
+
+### Step 5: More Review Questions
+
+(Adapted from [Barrons AP CS Book](
+http://www.mooreschools.com/cms/lib/OK01000367/Centricity/Domain/1996/book.pdf))
+
+Please answer the following questions in a separate file, and either
+tell me your answers in person or send your answers to me through email.
+
+1)
+Consider the functions below
+```java
+public static void One(int a, int b){
+    a = a + 3;
+    b = b + 2;
+}
+
+public static int Two(int a, int b){
+    b = b + 4;
+    return a + 3;
+}
+
+public static int Three(int a, int b){
+    return a + b;
+}
+
+public static void main(String[] args){
+    int a = 1;
+    int b = 0;
+    b = Two(a, b);
+    One(b, a);
+    a = Three(a, a);
+    a = Two(b, a);
+}
+
+```
+What values are in `b` and in `a` by the end of the program?
+
+2)
+Consider the functions
+```java
+public static int add(int a, int b){
+    return a + b;
+}
+
+public static int multiply(int a, int b){
+    return a * b;
+}
+
+public static int main(String[] args){
+    int c = multiply(3, add(4,5));
+}
+```
+
+What value is stored in `c` by the end of the program?
+
+3) 
+Consider the function
+```java
+public static void main(String[] args){
+    int n = 0;
+    int k = 30;
+    if(n != 0 && n / k % 100 == 0){
+        System.out.println("Foo");
+    }else{
+        System.out.println("Bar");
+    }
+}
+```
+
+What is printed by this program?
+
+4) What value is in answer after running the following
+line of code
+```java
+double answer = (double)(13 / 5);
+```
+
+5)
+```java
+public static int sumWithWhileLoop(int n){
+    int counter = 1;
+    int sum = 0;
+    while(counter <= n){
+        sum = sum + counter;
+        counter++;
+    }
+    return sum;
+}
+
+public static int sumWithForLoop(int n){
+    int sum = 0;
+    for(int i = 0 ; i <= n ; i++){
+        sum = sum + i;
+    }
+    return sum;
+}
+
+/*
+Checks if the functions are equal for three
+ different values*/
+@Test
+public void testSums(){
+    assertEquals(sumWithForLoop(-1), sumWithWhileLoop(-1));
+    assertEquals(SumWithForLoop(0), sumWithWhileLoop(0));
+    assertEquals(sumWithForLoop(5), sumWithWhileLoop(5));
+}
+```
+
+is this program able to run to completion? If so, which line of 
+the test function causes the failure?

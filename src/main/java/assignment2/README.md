@@ -66,6 +66,10 @@ we use the access operator, `[]`, which is a lot like the `get()` function of an
 To get the value 2 in `storeNumbers`, we would access the element at index 1:
 `int two = storeNumbers[1];`
 
+You can access the size of a 1D built in array
+through the command `myArrayName.length`, replacing
+`myArrayName` with the name of your built-in 1D array.
+
 **Default Values on Initialization**
 
 Let's say I just created a new array to store ten integers in a built-in array.
@@ -141,6 +145,21 @@ because 6 is in the 1-index row (second row), and in the 1-index column
 If we wanted to access 2, this would be done through `myArray[1][0]`,
 as it is in the 1-index row, and 0-index column.
 
+You can access the dimensions of a 2D built in array
+through the commands `myArrayName.length` and `myArrayName[0].length`.
+
+`myArrayName.length` gets the number of rows (the height) of the 2D
+built-in array. In this example, it would get the number of rows
+for a 2D built-in array named `myArrayName`.
+
+`myArrayName[0].length` gets the number of columns (the width) of
+the array. 
+
+### Step 1.5: ArrayProblems
+
+Open up `ArrayProblems.java` and solve the two problems
+contained within the file. Check your answers using
+the test cases in `TestArrayProblems.java`
 
 ### Step 2: Review Exercises
 
