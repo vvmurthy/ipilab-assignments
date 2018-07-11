@@ -21,7 +21,7 @@ because the indices start at 0.
 For example, to put an item into the `ArrayList` and then
 access the first element of the `ArrayList`, we would write
 
-```
+```java
 ArrayList<Integer> list = new ArrayList<>();
 list.add(2); // put 2 into list. 2 will be at index 0 of the array list
 int two = list.get(0); // gets 2 from list
@@ -39,7 +39,7 @@ variables and keeping track of them and storing them separately. Let's say we
 wanted to create variables for the numbers 1, 2, and 3.
 
 Before built in arrays, we would have needed to initialize our variables as follows:
-```
+```java
 int storesOne = 1;
 int storesTwo = 2;
 int storesThree = 3;
@@ -49,7 +49,7 @@ This would have been tough, as we would have needed to remember the names of thr
 different variables, and keep track of them at all points of the program.
 
 With a built in array, we initialize our variables as follows:
-```
+```java
 int[] storeNumbers = new int[3]; // initialize built-in array of 3 elements
 storeNumbers[0] = 1;
 storeNumbers[1] = 2;
@@ -181,11 +181,12 @@ today is not from writing code from scratch, but rather
 how to efficiently use other people's code in writing
 your own software.
 
-If you do end up working on FAST, your code will primarily
+If you do end up working on the eye project, your code will primarily
 come from two sources- myself, and the Java Standard Library.
 The good things is that for neither of these two sources
 do you have to understand what is going on in the code 
-in-depth. All you have to know is the input, output, and what
+in-depth. All you have to know is the input of each function
+you are going to use, the function's output, and what
 errors can occur in the program. 
 
 This knowledge- of just the input, output and what errors
@@ -209,6 +210,8 @@ comments would be automatically extracted by a document generator
 and converted to a software's online documentation. 
 One famous example of generated documentation is the 
 [Java Official Documentation](https://docs.oracle.com/javase/8/docs/api/). 
+For now, however, you do not need to read the documentation of Java 8.
+It may be more useful as you become a more experienced Java programmer.
 
 #### Review:
 
