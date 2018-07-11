@@ -7,56 +7,100 @@ and data structures.
 
 ### Step 1: Learning about Built-in Arrays
 
+#### ArrayLists
+
+In CodeCademy, one of the Java objects you should have covered is the 
+`ArrayList`. An `ArrayList` stores elements in sequential order, and allows
+the programmer to access its elements through the location of the element.
+
+The position of an element in the `ArrayList` is called its index. In Java
+the first element of any array 
+is considered to be index 0. This is called *0-based indexing*
+because the indices start at 0. 
+
+For example, to put an item into the `ArrayList` and then
+access the first element of the `ArrayList`, we would write
+
+```
+ArrayList<Integer> list = new ArrayList<>();
+list.add(2); // put 2 into list. 2 will be at index 0 of the array list
+int two = list.get(0); // gets 2 from list
+```
+
 #### 1D Built-in Arrays
 
-While CodeCademy is a good resource, it does neglect to speak of built-in arrays
-and their 2D variants.
+Within the Java programming language, the `ArrayList` class is implemented 
+using another objected type called a built-in array.
 
-The Java `ArrayList` class is implemented using something called a built-in array.
-It's a set amount of locations to store a fixed number of variables
-of a given type. For example, if I wanted to create a built-in array to store
-10 integers, I would initialize it like:
+A built-in array consists of a set amount of locations to store a fixed number of variables
+of a given type. This can be a loaded sentence at first, but basically, before built-in
+arrays (or the `ArrayLists` built from them), we were limited to creating several
+variables and keeping track of them and storing them separately. Let's say we 
+wanted to create variables for the numbers 1, 2, and 3.
+
+Before built in arrays, we would have needed to initialize our variables as follows:
+```
+int storesOne = 1;
+int storesTwo = 2;
+int storesThree = 3;
+```
+
+This would have been tough, as we would have needed to remember the names of three
+different variables, and keep track of them at all points of the program.
+
+With a built in array, we initialize our variables as follows:
+```
+int[] storeNumbers = new int[3]; // initialize built-in array of 3 elements
+storeNumbers[0] = 1;
+storeNumbers[1] = 2;
+storeNumbers[2] = 3;
+```
+
+Now, we would only need to keep track of the `storeNumbers` variable, while
+knowing where each of our integers are through their index in the built-in array
+`storeNumbers`. 
+
+To access a element in the built-in array, 
+we use the access operator, `[]`, which is a lot like the `get()` function of an `ArrayList`. 
+
+To get the value 2 in `storeNumbers`, we would access the element at index 1:
+`int two = storeNumbers[1];`
+
+**Default Values on Initialization**
+
+Let's say I just created a new array to store ten integers in a built-in array.
+I would initialize the built-in array as follows:
 
 ```java
 int[] myNumbers = new int[10];
 ```
 
-Each of these positions would start with some value- normally that value is no value,
-referred to in Java as `null`. For `int` however, the starting value of all
+Before I assign any values to the positions in the built-in array, each
+position contains a starting, default value. Normally that value is no value,
+referred to in Java as `null`. For `int` type variables however, the starting value of all
 positions in the built-in arrray is 0.
 
+**Usefulness of Built-in Arrays**
+
 The reason built-in arrays are used a lot in image processing is that they
-do not waste memory as much as an ArrayList. See, the `ArrayList` is a class that
-contains a built-in array inside it, to store variables. In order for us to not
-have to manually expand the built-in array every time we exceed its capacity, the
-`ArrayList` adds a fixed number, 
-usually around `size() / 2` elements, then re-adds all elements from the
-original arraylist to the new one, every few times we add an element to
-the `ArrayList`. 
+do not waste memory as much as an `ArrayList`. The `ArrayList` is a class that
+contains a built-in array inside it, to store variables. However, built-in
+arrays have a fixed capacity- `ArrayList` data type variables do not. 
+In order for us to not
+have to manually expand the  `ArrayList`'s internal
+built-in array every time we exceed its capacity, the
+`ArrayList` automatically creates a larger built-in array with an additiona number
+of elements, usually around `size() / 2` elements, then re-adds all elements from the
+original built-in array to the new one, every time we exceed the capacity of the
+`ArrayLists`'s built-in array. 
 
-So, for a lot of the times we add in elements, 
-we have unfilled elements in an `ArrayList` that
+So, for a lot of the time when using an `ArrayList`
+we have unfilled elements in the `ArrayList` that
 just waste memory. With a built-in array, if we know exactly how many elements
-we need in our array, we can save as much memory as possible by not having
+we need in our array, we can save as much computer memory as possible by not having
 unfilled elements. Because we usually know the size of our images beforehand,
-we can initialize our built-in array with the exact number of elements needed.
-
-The question then becomes- how can we access each element of the built-in array?
-It is a lot like the `get()` method of an `ArrayList`. Instead, we use the 
-access operator, `[]`
-
-For example, to access each of the elements from our built-in `int` array,
-we can do:
-
-```java
-for(int i = 0 ; i < myArray.length ; i++){
-    System.out.println(myArray[i]);
-}
-```
-
-Here, our for loops goes through each position of the built-in array
-by index (location), and we use the access operator to access the element
-at that index.
+we can initialize our built-in array with the exact number of elements needed. This
+allows our program to be more efficient. 
 
 #### 2D Built-in arrays
 
