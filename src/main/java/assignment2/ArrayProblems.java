@@ -14,7 +14,7 @@ public class ArrayProblems {
      * @return 1D reversed built-in array
      */
     public static int[] reverseArray(int[] n){
-        return new int[1]; // TODO: delete and replace
+        return new int[1]; // TODO: Delete and replace
     }
 
     /**Finds the max value in a given 2D array

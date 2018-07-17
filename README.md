@@ -32,9 +32,10 @@ Once you give me your username, go to this
 the button that says `Clone or Download`. Download the zip file, and 
 extract it to some directory. 
 
-2) An account on [CodeCademy](https://www.codecademy.com/learn/learn-java). 
-We will be using the course Learn Java as part of your work. 
-Sign up for the free account option using either a personal or a school email.
+2) Download the textbook from 
+[this link](http://greenteapress.com/thinkapjava/thinkapjava.pdf).
+You will not be reading the full textbook, but rather just the sections
+I tell you to read at the start of each assignment. 
 
 3) The Java Development Kit along with an IDE, 
 or an environment where you will be writing your code. 

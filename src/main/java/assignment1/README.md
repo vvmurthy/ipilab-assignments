@@ -1,5 +1,86 @@
 ## Assignment 1: Java Syntax, Loops, Conditionals, Unit Tests, Documentation
 
+### Lesson in the Textbook + Introduction to Unit Tests
+
+Read the entirety of Chapter 2, 3 and 4.1. 
+At the end of each section, there are exercises.
+Do not complete the exercises as described there; complete the exercises as
+described here. You will complete the exercises as follows:
+
+**Exercise: Modulus Operator**
+
+What are the values in `a`, `b`, `c` and `d` after this section of
+code is run?:
+```java
+    int a = 10 % 3;
+    int b = 10 / 3;
+    int c = 10 + 2 % 3;
+    int d = (10 + 2) % 3;
+```
+
+**Exercise: `InternationalDate.java`**
+
+1) Open up `InternationalDate.java`. You will see three functions:
+    * `public static String AmericanDate(String day, String month, String year)`. This
+    function is to return a date in the American method. American dates are
+    formatted as "January 16, 2018" or "August 12, 1990". For example,
+    for `day="20"`, `month="February"` and `year="1800"`, you should return:
+    "February 20, 1800". 
+    * `public static String EuropeanDate(String day, String month, String year)`. This
+      function is to return a date in the European method. European dates are
+      formatted as "16 January 2018" or "12 August 1990". For example,
+      for `day="20"`, `month="February"` and `year="1800"`, you should return:
+      "20 February 1800".
+   *`public static void main(String[] args)`. here you should call `AmericanDate`
+   and `EuropeanDate` to get `String` variables containing each date, then 
+   print each date to the screen. This will allow you to test your function
+   visually.
+2) Fill out the correct logic for `main`, `AmericanDate` and `EuropeanDate`. It
+will be best to start with the following lines in `main`:
+```java
+public static void main(String[] args){
+    
+    // Set up sample inputs
+    String sampleDay = "1";
+    String sampleMonth = "January";
+    String sampleYear = "1900";
+    
+    // TODO: write code here to start, then
+    // copy it into `AmericanDate` when it works
+    
+    // Print the answer to the screen
+    System.out.println("Replace this string with your AmericanDate String");
+    
+    // TODO: write code here to start, then
+   // copy it into `EuropeanDate` when it works
+        
+   // Print the answer to the screen
+   System.out.println("Replace this string with your EuropeanDate String");
+}
+``` 
+As you get the code to create a String in the American format or a String
+in the European format, you can test your code by running the `main` function.
+3) Once you have filled out `AmericanDate` and `EuropeanDate`, open up 
+`TestInternationalDate.java` in `src/test/assignment1/`. 
+This is an example of a **unit test**
+file. Each function in this file is a testing function (that's why they are
+marked with `@Test` on the top of the function.) Unit tests are a way
+for programmers to check intermediate results of their function against
+specific inputs. If you develop a large program, you cannot find bugs
+as easily unless you run the functions by themselves and check that their
+outputs are what you expect. We will be using unit tests to ensure that
+your functions are working correctly. 
+4) Right-click and run `testAmericanDate`. At the bottom of your screen,
+you should see either a Red progressbar or a Green progressbar. A red
+progressbar indicates your test has failed; a green one indicates that
+it has passed. Additionally, the test may not even run: it may say
+something along the lines of `could not compile (some filename).java`.
+If the test does not compile, read the section below on Java syntax
+errors, then attempt to fix any errors in your program. 
+5) Fix errors in your program using the Java syntax guide below. You should
+be able to run `testAmericanDate` and `testEuropeanDate` and have passed
+both tests (green progressbar).
+
 ### Step 0: Java Syntax
 
 Read the following sections, and answer the practice questions at the end of the section. When you have answers to the practice questions, let me know so I can check your answers. 
@@ -23,7 +104,7 @@ There are a lot of syntax rules in the Java programming language. The main ones 
 1) Most statements must end in a semicolon. The only exception to this is if statements, loops, function declarations, and brackets.
 
 Consider the function
-```
+```java
 public static void printTenEvenNumbers(){ // function declaration, no semicolon
 	for(int i = 0 ; i < 20 ; i++){ // loop, no semicolon
 		if( i % 2 == 0){ // if statement, no semicolon
@@ -37,13 +118,13 @@ Here, the only line we needed a semicolon for was our one `print` statement. Typ
 
 2) Every opening parenthesis must have a closing parenthesis. Every opening bracket must have a closing bracket.
 For example
-```
+```java
 // Invalid code, no closing bracket
 if(x == 2){
 	System.out.println(x);
 ``` 
 
-```
+```java
 // invalid code, parenthesis in if statement are unbalanced
 if((y == 2) && (x == 3){
 	System.out.println("Y: " + y);
@@ -53,14 +134,14 @@ if((y == 2) && (x == 3){
 3) Every function which returns a value (called a `non-void` function in the Java language), must return a variable of that type
 
 In order to tell if a function is non-void, we look at the function declaration at the start of each function. For example, consider the function
-```
+```java
 public static int main(){
 	return 0;
 }
 ```
 
 Here, we can tell from the third keyword, `int`, that this function `main`, returns a value of type integer. If the function was something like:
-```
+```java
 public void doSomething(){
 }
 ```
@@ -77,7 +158,7 @@ syntax of a Java function are called "Compilation Errors".
 * `) expected` -> Typically, this means you have unbalanced parenthesis somewhere in your function. Look at which file the error occurs in, then look for opening parenthesis that may not be matched with a closing parenthesis.
 * `; expected` -> You forgot a semicolon on the specified line
 * `missing return statement` -> a `non-void` function does not return a value at the end of the function. If the function does not have a `void` keyword in its declaration, you must return a value of the type specified in the function declaration. Sometimes, this will occur if you have a function structured as follows:
-```
+```java
 public static void isEven(int n){
 	if(n % 2 == 0){
 		return true;
@@ -94,7 +175,7 @@ so that our code follows Java syntax, even if that extra `return` statement will
 This issue occurs because the compiling of the test function, and of the main function you want to test occurs separately. So if the test code compiles, but the main code doesn't, then this error can occur. 
 
 **Super important Note**: If a function you do not want to test at the moment is causing compilation errors, it is best to comment out the function. You can do this as follows
-```
+```java
 public static int functionIDontWantToRun(){
 	/** add this symbol above code you want to comment out
 
@@ -108,7 +189,7 @@ public static int functionIDontWantToRun(){
 #### Practice
 
 1) What is wrong with this function (there are multiple errors in the function)
-```
+```java
 public static void main doSomething(){
 	int x = 2;
 	int y = 3;
@@ -120,7 +201,7 @@ public static void main doSomething(){
 ```
 
 2) What is wrong with this function (there are multiple errors in the function)
-```
+```java
 public static int doSomething(int x, int y){
 	if((x == 2) && (y == 3)){
 		System.out.println(x);
@@ -129,7 +210,7 @@ public static int doSomething(int x, int y){
 ```
 
 3)**challenge** What is wrong with this function (there is a lot wrong with this function)
-```
+```java
 public static boolean doSomething(){
 	if(something){
 		boolean anotherBoolean = Function.doSomethingElse(something)
