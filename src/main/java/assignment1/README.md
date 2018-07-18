@@ -2,10 +2,65 @@
 
 ### Lesson in the Textbook + Introduction to Unit Tests
 
-Read the entirety of Chapter 2, 3 and 4.1. 
+Read Chapter 2, 3, 4.1, 7.2 and 12.4.
 At the end of each section, there are exercises.
 Do not complete the exercises as described there; complete the exercises as
 described here. You will complete the exercises as follows:
+
+**Chapter 2 Exercises**
+
+1) What does this print out?
+```java
+class MyPrinter{
+	public static void main(String[] args){
+		String firstLine;
+		firstLine = "This is the first line";
+		System.out.println("firstLine");
+	}
+}
+```
+
+2) What is wrong with this function?
+```java
+class BadPrinter{
+	public static void main(String[] args){
+		int public = 0;
+		System.out.println("Indexing should start at: " + public);
+	}
+}
+```
+
+3) What is wrong with this function?
+```java
+class BadFunctions{
+	public static void main(String[] args){
+		int seven = 7;
+		Bool True = true;
+		if(True){
+			System.out.println("Lucky Number: " + seven);
+		}
+	}
+}
+```
+
+4)
+```java
+class BadFunctions{
+	public static void main(String[] args){
+		int seven = "7";
+		if(true){
+			System.out.println("Lucky Number: " + seven);
+		}
+	}
+}
+```
+
+5) Write a function that determines if a function is divisible by either 2 or 3
+```java
+public static boolean isDivisible(int n){
+	// TODO: your code here
+}
+```
 
 **Exercise: Modulus Operator**
 
