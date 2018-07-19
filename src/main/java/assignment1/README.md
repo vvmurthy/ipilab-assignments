@@ -62,9 +62,70 @@ public static boolean isDivisible(int n){
 }
 ```
 
-**Exercise: Modulus Operator**
+6) What is wrong with this function?
+```java
+public class MyClass{
+	public static void int(String[] args){
+		System.out.println("This is my function");
+	}
+}
+```
 
-What are the values in `a`, `b`, `c` and `d` after this section of
+7) What is wrong with this function?
+```java
+public class AnotherClass{
+	public static void main(String[] args){
+		double x = 1;
+		Int y = 0;
+		System.out.println("One is " + x + " and zero is " + y);
+	}
+}
+```
+
+8) What values are stored in each variable when this function terminates?
+```java
+public class AnotherClass{
+	public static void main(String[] args){
+		double a = (int)(60/2);
+		double b = (int)(60 % 2);
+		double c = 61 / 2; 
+		double d = 61 / 2.0;
+		double e = 10 + 2 / 4;
+		double f = 10 * 2 / 5;
+		double g = ((10 - 2) / (2 - 1)) % 3; 
+		double h = 4 / 5-1;
+	}
+}
+```
+
+9) Which lines produce a compilation error and why?
+```java
+public class AnotherClass{
+	public static void main(String[] args){
+		String myString = "Hello";
+		String myProgram = "This is my program";
+		
+		System.out.println(myProgram - myString);
+		System.out.println(myProgram + myProgram);
+		System.out.println(myProgram * 2);
+		System.out.println("123" / 2);
+		
+	}
+}
+```
+*Extra Question* - What does
+`System.out.println(myString + myProgram);` print? Be exact about capitals and spaces. 
+
+10) What is wrong with this function and why?
+```
+public static void main(String[] args){
+	int y = 0;
+	int x = 0;
+	y + 1 = x;
+}
+```
+
+11) What are the values in `a`, `b`, `c` and `d` after this section of
 code is run?:
 ```java
     int a = 10 % 3;
