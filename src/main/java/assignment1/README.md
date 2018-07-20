@@ -134,6 +134,117 @@ code is run?:
     int d = (10 + 2) % 3;
 ```
 
+12) What is wrong with this function?
+```java
+public class MyClass{
+    public static void main(String[] args){
+        int myNumber = 3.4;
+        System.out.println(myNumber);
+    }
+    
+}
+```
+
+13) What are the values in `a`, `b`, `c` and `d` after this section of
+   code is run?:
+   ```java
+       double a = 45 / 10;
+       double b = (int)(4.0 / 5);
+       double c = 0.1 + (int)(Math.PI) * 2 % 3;
+       int d  = (int)Math.PI * 3;
+   ```
+
+14) Why does this line of code fail?
+```java
+double a = Math.sin();
+```
+
+15) Consider the following functions. What is the value of `myNumber`
+at the end of `main`'s execution?
+```java
+public class MyClass{
+    public static int sin(double a){
+        return Math.sin(a);
+    }
+    
+    public static int pythagoras(double a, double b){
+        return Math.sqrt(a * a + b * b);
+    }
+    
+    public static void main(String[] args){
+        double myNumber = sin(pythagoras(3,4)/5 * Math.PI / 2.0);
+    }
+}
+```
+
+16)Why does this class not compile?
+```java
+public class myClass{
+    
+    public void doSomething{
+        System.out.println("Do something");
+    }
+    
+    public static void main(String[] args){
+        doSomething();
+    }
+}
+```
+
+17)Why does this class not compile?
+```java
+public class myClass{
+    
+    public void main(String[] args){
+        System.out.println("foo");
+    }
+    
+    public static void main(String[] args){
+        System.out.println("bar");
+    }
+}
+```
+
+18)Why does this line of code fail?
+```java
+int pi = Math.PI;
+```
+
+19) I try to run `DoSomething(String[] args)`. Why does it fail?
+```java
+public class myClass{
+    public static void DoSomething(String[] args){
+        System.out.println("bar");
+    }
+}
+```
+
+20) What letters are printed by the end of `main`'s execution?
+```java
+public class myClass{
+    public static void bug(){
+        System.out.print("A");
+    }
+    
+    public static void function2(){
+        System.out.println("B");
+        bug();
+        bug();
+    }
+    
+    public static void function3(){
+        bug();
+        function2();
+        System.out.println("C");
+    }
+    
+    public static void main(String[] args){
+        function2();
+        function3();
+    }
+}
+```
+
 **Exercise: `InternationalDate.java`**
 
 1) Open up `InternationalDate.java`. You will see three functions:
