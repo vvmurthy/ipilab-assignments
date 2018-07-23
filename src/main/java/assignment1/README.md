@@ -7,8 +7,6 @@ At the end of each section, there are exercises.
 Do not complete the exercises as described there; complete the exercises as
 described here. You will complete the exercises as follows:
 
-**Chapter 2 Exercises**
-
 1) What does this print out?
 ```java
 class MyPrinter{
@@ -244,6 +242,140 @@ public class myClass{
     }
 }
 ```
+
+21) What is wrong with this function? The user is trying to call the `sqrt`
+function in the `Math` library
+```java
+public static double sqrtFunction(double n){
+    return sqrt(n);
+}
+```
+
+
+22)What is printed out by this program?
+```java
+public class printLetters{
+    
+    public static void printA(){
+        System.out.println("A");
+    }
+    
+    public static void main(String[] args){
+        printBA();
+        printA();
+    }
+    
+    public static void printBA(){
+        System.out.println("BA");
+        printA();
+    }
+    
+}
+```
+23) What is wrong with this program?
+```java
+public class printLetters{
+    
+    public static void printString(String l){
+        System.out.println(l);
+    }
+    
+    public static void main(String[] args){
+        printString("Magic number is: ");
+        printString(18);
+    }
+}
+```
+24) What is wrong with this program?
+```java
+public class printLetters{
+    
+    public static void printString(String l){
+        System.out.println(l);
+    }
+    
+    public static void main(String[] args){
+        printString("Magic number is: ") + printString("18");
+    }
+}
+```
+
+25) What is wrong with this function?
+```java
+public static void printString(String l, otherString){
+        System.out.println(l + otherString);
+    }
+```
+
+26) What is the value of `a` at the end of this program?
+```java
+public class myMath{
+    
+    private static void add2(double num){
+        num += 2;
+    }
+    
+    public static void main(String[] args){
+        int a = 4;
+        add2(a);
+        a++;
+    }
+}
+```
+
+27) Why can we not run this program?
+```java
+public class myMath{
+    
+    private static void add2(double num){
+        num += 2;
+    }
+    
+    public static void startMyProgram(String[] args){
+        int a = 4;
+        add2(a);
+        a++;
+    }
+}
+```
+
+28) I get an error running this function, `Control Reaches end of non-void
+function`. What does this error mean (and why is it relevant to my function)?
+```java
+public static void add3(int n){
+    n += 3;
+    return n;
+}
+```
+
+29) Why is this code segment incorrect?
+```java
+public class Something(){
+    public static void main(String[] args){
+        System.out.println("Something");
+    }
+}
+```
+
+30) What numbers are in `a`, `b` and `c` by the end of this function?
+*Hints*: `NaturalLogarithm` = `ln` in math notation
+`acos` = `arccos` or `cos-1(x)` in math notation. 
+
+```java
+public class MathPractice{
+    
+    public static double NaturalLogarithm(int n){
+        return Math.log(n);
+    }
+    
+    public static void main(String[] args){
+        double a = Math.cos(Math.acos(1));
+        double b = NaturalLogarithm(1);
+        double c = Math.sin(NaturalLogarithm(1)) + Math.sin(Math.acos(0)) % 2;
+    }
+}
+```
+
 
 **Exercise: `InternationalDate.java`**
 
