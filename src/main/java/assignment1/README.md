@@ -2,7 +2,7 @@
 
 ### Lesson in the Textbook + Introduction to Unit Tests
 
-Read Chapter 2, 3, 4.1, 7.2 and 12.4.
+Read Chapter 2, 3, 4.1-4.5 (including 4.5), 7.2 and 12.4.
 At the end of each section, there are exercises.
 Do not complete the exercises as described there; complete the exercises as
 described here. You will complete the exercises as follows:
@@ -372,6 +372,128 @@ public class MathPractice{
         double a = Math.cos(Math.acos(1));
         double b = NaturalLogarithm(1);
         double c = Math.sin(NaturalLogarithm(1)) + Math.sin(Math.acos(0)) % 2;
+    }
+}
+```
+
+31) What values are in `a`, `b`, `c` and `d` by the end of execution?
+```java
+public class Modulus{
+    public static void main(String[] args){
+        double a = 4 % 5;
+        double b = 10 % 3 % 4;
+        double c = 1241231231 % 10;
+        double d = 987654 % 100 / 9;
+    }
+}
+```
+
+32) What errors are in this program?
+```java
+public class MyProgram{
+    public static void main(String[] args){
+        int k = 0;
+        while(k < 1){
+            System.out.println("K invalid");
+        }
+    }
+}
+```
+
+33) What does this program print?
+```java
+public class MyProgram{
+    public static void main(String[] args){
+        boolean myValue = false;
+        while(myValue){
+            System.out.println("Loop");
+        }
+    }
+}
+```
+
+34) What value is in `k` by the end of the program?
+```java
+public class MyProgram{
+    public static void main(String[] args){
+        int k = 0;
+        int n = 1;
+        while(n < 3){
+            k += (n % 2);
+            n++;
+        }
+    }
+}
+```
+
+35) What is wrong with this code?
+```java
+public class MyProgram{
+    public static void main(String[] args){
+        int k = 0;
+        int n = 1;
+        for(int i = 0 ; i < 10 ; k++){
+            System.out.println("For loop");
+        }
+    }
+}
+```
+
+36) What does this code print?
+```java
+public class MyProgram{
+    public static void main(String[] args){
+        for(int i = 0 ; i < 3 ; i+=(13 % 2)){
+            System.out.println(i);
+        }
+    }
+}
+```
+
+37) What is wrong with this code?
+```java
+public class MyProgram{
+    public static void main(String[] args){
+        for(int i = 0 ; i < 3 ; i*=2){
+            System.out.println(i);
+        }
+    }
+}
+```
+38) What does this code print?
+```java
+public class MyProgram{
+    public static void main(String[] args){
+        for(int i = 1 ; i < 9 ; i*=2){
+            System.out.println(i);
+        }
+    }
+}
+```
+
+39) What is wrong with this code?
+
+```java
+public class MyProgram{
+    public static void main(String[] args){
+        for(int i = 1 ; i < 2 ; i+= 0.02){
+            System.out.println(i);
+        }
+    }
+}
+```
+
+40) What does this code print?
+```java
+public class MyProgram{
+    public static void main(String[] args){
+        for(double i = Math.sin(0); i <= 0.03 ; i+= 0.01){
+            double j = i * 100 % 100;
+            while(j > 0){
+                System.out.println(j);
+                j--;
+            }
+        }
     }
 }
 ```
