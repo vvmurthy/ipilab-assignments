@@ -1,9 +1,32 @@
 ## Assignment 2: Built-in 2D Arrays, ArrayLists and Using Other People's Code
 
-### Step 0: CodeCademy
+### Step 0: TextBook
 
-Complete the remaining modules of CodeCademy on Object-oriented programming
-and data structures. 
+Read the rest of chapter 12 (every section except 12.4), 
+and 16.1-16.3 (including 16.3). Review questions are below. 
+
+1) What errors does this program contain?
+```java
+public class myInitialization{
+    public static void main(String[] args){
+        String[] strings;
+        float[] floats;
+        System.out.println("First float is " + floats[0]);
+    }
+}
+```
+
+2) Complete the following function
+```java
+public class myInitialization{
+    public static void main(String[] args){
+        /* TODO: 
+        Initialize a 1D built-in array of strings
+        of length 13, and a 1D built-in array of 
+        floats of length 2*/
+    }
+}
+```
 
 ### Step 1: Learning about Built-in Arrays
 

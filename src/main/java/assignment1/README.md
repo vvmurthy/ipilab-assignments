@@ -2,7 +2,7 @@
 
 ### Lesson in the Textbook + Introduction to Unit Tests
 
-Read Chapter 2, 3, 4.1-4.5 (including 4.5), 7.2 and 12.4.
+Read Chapter 2, 3, 4, 7.2 and 12.4.
 At the end of each section, there are exercises.
 Do not complete the exercises as described there; complete the exercises as
 described here. You will complete the exercises as follows:
@@ -498,6 +498,178 @@ public class MyProgram{
 }
 ```
 
+41) What does this program print?
+```java
+public class myErrorProgram{
+    public static void main(String[] args){
+        System.out.println("Fizz");
+        return; 
+        
+        System.out.printn("Buzz");
+    }
+}
+```
+
+42) What, if any, errors does this program contain?
+```java
+public class myPossibleErrors{
+    public static void main(String[] args){
+        System.out.println("0");
+    }
+}
+```
+
+43) What, if any, errors does this program contain?
+```java
+public class myPossibleErrors{
+    public static double myFunction(){
+        System.out.println("2");
+    }
+    
+    public static void main(String[] args){
+        myFunction();
+        return;
+    }
+}
+```
+
+44) Which of the following options cannot be printed by the function
+`myFunction` below?
+
+A) `"AB"`
+B) `"BA"`
+C) `"AA`
+
+```java
+public class myOptions{
+    public static void myFunction(double n){
+        if(n < 0){
+            System.out.println("A");
+            if(n * -1 < 0){
+                System.out.println("B");
+            }else{
+                System.out.println("A");
+            }
+        }else{
+            System.out.println("B");
+            if(n % 2 == 0){
+                System.out.println("B");
+            }else{
+                System.out.println("A");
+            }
+        }        
+    }
+}
+```
+
+45) What is the error in this program?
+```java
+public class badRecursion{
+    public static void myBadRecursion(double n){
+        myBadRecursion(n-1);
+        if(n == 0){
+            return;
+        }
+    }
+    
+    public static void main(String[] args){
+        myBadRecusion(10);
+    }
+}
+```
+
+46) Given an example input for which `myBadRecusion` will recurse infinitely
+```java
+public class badRecursion{
+    public static void myBadRecursion(double n){
+        if(n == 0){
+            return;
+        }
+        myBadRecursion(n-1);
+    }
+}
+```
+
+
+47) What numbers are printed by the following program?
+```java
+public class Recursion{
+    public static void myRecursion(double n){
+        System.out.println(n);
+        if(n <= 0){
+            return;
+        }
+        myRecursion(n/2);
+        System.out.println(n);
+    }
+    
+    public static void main(String[] args){
+        myRecursion(4);
+    }
+}
+```
+
+48) What number is printed by the following program?
+```java
+public class Recursion{
+    public static double myRecursion(double n){
+        if(n <= 0){
+            return 1;
+        }
+        return n * myRecursion(n/2);
+    }
+    
+    public static void main(String[] args){
+        System.out.println(myRecursion(4));
+    }
+}
+```
+
+49) What numbers are printed by the following program?
+```java
+public class TrigPractice{
+    public static double trigFunction(double n){
+        if(Math.sin(n) == 0){
+            System.out.println("1");
+            if(Math.tan(n) == 0){
+                System.out.println("2");    
+            }
+        }else if(Math.cos(n) == 0){
+            if(Math.acos(Math.cos(n)) == n){
+                System.out.println("3");
+            }
+        }
+    }
+    
+    public static void main(String[] args){
+        trigFunction( (3.0 / 2.0) * Math.PI);
+        trigFunction(0);
+    }
+}
+```
+
+50) What numbers are printed by the following program?
+```java
+public class TrigPractice{
+    public static double trigFunction(double n){
+        if(Math.sin(n) == 1){
+            System.out.println("1");
+            if(Math.tan(n) == 0){
+                System.out.println("2");    
+            }
+        }else if(Math.tan(n) == 0){
+            if(Math.acos(Math.cos(n)) == n){
+                System.out.println("3");
+            }
+        }
+    }
+    
+    public static void main(String[] args){
+        trigFunction( (1.0 / 2.0) * Math.PI);
+        trigFunction(0);
+    }
+}
+```
 
 **Exercise: `InternationalDate.java`**
 
