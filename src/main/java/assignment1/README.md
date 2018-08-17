@@ -578,7 +578,8 @@ public class badRecursion{
 }
 ```
 
-46) Given an example input for which `myBadRecusion` will recurse infinitely
+46) Give an example input value for `n` for which `myBadRecusion` will recurse infinitely.
+Note there are several answers to this problem; you need only provide one.
 ```java
 public class badRecursion{
     public static void myBadRecursion(double n){
@@ -589,7 +590,6 @@ public class badRecursion{
     }
 }
 ```
-
 
 47) What numbers are printed by the following program?
 ```java

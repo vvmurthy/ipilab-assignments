@@ -2,7 +2,7 @@
 
 ### Step 0: TextBook
 
-Read the rest of chapter 12 (every section except 12.4), 
+Read chapter 11, 12.1-12.7 (except 12.4), 
 and 16.1-16.3 (including 16.3). Review questions are below. 
 
 1) What errors does this program contain?
@@ -27,6 +27,208 @@ public class myInitialization{
     }
 }
 ```
+
+3) What elements are in `myArray` after the following program is run?
+```java
+public class myArrayFunctions{
+    public static void main(String[] args){
+        int[] myArray = new int[4];
+        for(int i = 0 ; i < myArray.length ; i++){
+            myArray[i] = 10 - i;
+        }
+        myArray[3] *= 2;
+    }
+}
+```
+
+4) What elements are in `myArray` after the following program is run?
+```java
+public class myArrayFunctions{
+    public static void main(String[] args){
+        int[] myArray = new int[4];
+        for(int i = 1 ; i < myArray.length ; i*=2){
+            myArray[i] = i;
+        }
+    }
+}
+```
+
+5) What exception is thrown by the following segment of code?
+```java
+public class myArrayFunctions{
+    public static void main(String[] args){
+        int[] myArray = new int[4];
+        myArray[0]++;
+        myArray[4]--;
+    }
+}
+```
+
+6) Which line of code causes an error to be thrown in this program?
+```java
+public class myArrayFunctions{
+    
+    public static int foo(){
+        return 1;
+    }
+    
+    public static double bar(int n){
+        return Math.log(n);
+    }
+    
+    public static void main(String[] args){
+        int[] myArray = new int[4];
+        myArray[bar(1)]--;
+        myArray[foo()] *= 2;
+    }
+}
+```
+
+7) What value is in `b[0]` after this program is run?
+```java
+public class myArrayFunctions{
+    
+    public static void main(String[] args){
+        int[] a = new int[4];
+        int[] b = new int[5];
+        b = a;
+        a[0]++;
+    }
+}
+```
+
+8) What, if any, errors does this program contain?
+```java
+public class myArrayFunctions{
+    
+    public static void main(String[] args){
+        int[] a = new int[4];
+        for(int i = 0 ; i <= a.length ; i++){
+            a[i] = i;
+        }
+    }
+}
+```
+
+9) What value is in `a[0]` at the end of this program?
+```java
+public class myArrayFunctions{
+    
+    public static void increment(int[] a){
+        a[0]++;
+    }
+    
+    public static void main(String[] args){
+        int[] a = new int[4];
+        for(int i = 0 ; i < a.length ; i++){
+            increment(a);
+        }
+    }
+}
+```
+
+10) What value is in `a[2]` at the end of this program?
+```java
+public class myArrayFunctions{
+    
+    public static void main(String[] args){
+        String[] a = new String[3];
+        String start = "start";
+        for(int i = 0 ; i < a.length ; i++){
+            if(i == 0){
+                a[i]  = "and ... ";
+            }else{
+                a[i] = a[i-1] + start;
+            }
+        }
+    }
+}
+```
+
+11) Complete the method `cloneArray`. It should return a reference
+(the variable) of the new copied array, not the original array.
+```java
+public class myArrayFunctions{
+    
+    public static String[] cloneArray(String[] originalArray){
+        //TODO: fill
+    }
+    
+    public static void main(String[] args){
+        String[] a = new String[3];
+        for(int k = 0 ; k < a.length ; k++){
+            a[i] = "start";
+        }
+        String[] b = cloneArray(a);
+    }
+}
+```
+
+12) Why does this program fail?
+```java
+public class myArrayFunctions{
+    public static void main(String[] args){
+        String[] a = new String[3];
+        for(int k = 0 ; k < a.length ; k++){
+            a = "start";
+        }
+    }
+}
+```
+
+13) What is the maximum value `i` will have by the end of the program?
+Give an example set of numbers that would cause `i` to have this maximum
+value.
+```java
+public class myArrayFunctions{
+    public static void main(String[] args){
+        double[] a = new double[4];
+        for(int i = 0 ; i < a.length ; i++){
+            a[i] = Math.random();
+            if(a[i] == 0.5){
+                break;
+            }
+        }
+    }
+}
+```
+
+14) Assume that it is equally likely to get any of the numbers in the 
+range [1, 10]. What is the probability that this program will print "foo"?
+```java
+public class myArrayFunctions{
+    
+    // Returns a random number in range [1, 10]
+    public static int randomOnetoTen(){
+        ...
+    }
+    
+    public static void main(String[] args){
+        double[] a = new double[4];
+        for(int i = 0 ; i < a.length ; i++){
+            a[i] = randomOnetoTen();
+        }
+        
+        if(a[4] < 3 && a[0] <= 5){
+            System.out.println("Foo");
+        }else{
+            System.out.println("Bar");
+        }
+    }
+}
+```
+
+15) Is it possible for this program to terminate? Why or why not?
+```java
+public class myArrayFunctions{
+    public static void main(String[] args){
+        while(Math.random() != 1){
+            System.out.println("Foo");
+        }
+    }
+}
+```
+
 
 ### Step 1: Learning about Built-in Arrays
 
