@@ -229,6 +229,74 @@ public class myArrayFunctions{
 }
 ```
 
+16) Is it possible for this program to throw an error? Why or why not?
+```java
+public class myArrayFunctions{
+    public static void main(String[] args){
+        while(Math.random() < 0.5){
+            System.out.println(Math.acos(2 * Math.random()));
+        }
+    }
+}
+```
+
+17) What number is stored in `a` at the end of program execution? What is the 
+maximum number that can be stored in `b` at the end of execution? What string will be 
+stored in `c` at the end of program execution?
+```java
+public class myArrayFunctions{
+    public static void main(String[] args){
+        int a = (int)(Math.random());
+        int b = (int)(5 * Math.random());
+        String c = "c";
+        if(b >= 5){
+            c = "b";
+        }
+    }
+}
+```
+
+18) Write a function that produces random numbers between [0, 10] (inclusive
+of 10). The function does not need to produce numbers in the uniform distribution
+(it does not need to have the same probability of producing each number)
+```java
+public class myArrayFunctions{
+    public static double randZeroTen(){
+        //TODO: fill function
+    }
+}
+```
+
+19) What number is in `a[3]` at the end of program execution?
+```java
+public class myArrayFunctions{
+    public static void main(String[] args){
+        int[] a = new int[5];
+        a[0]--;
+        a[1] = a[2];
+        a[3] = Math.cos(a[1]);
+        a[3] -= Math.cos(a[2]);
+        a[3] -= a[0];
+    }
+}
+```
+
+20) Write a function that prints the numbers in input array `a` in
+reverse order (last to first element).
+```java
+public class myArrayFunctions{
+    
+    public static void printReverse(int[] a){
+        //TODO: fill
+    }
+    
+    public static void main(String[] args){
+        int[] a = new int[5];
+        // some code to fill `a` here
+        printReverse(a);
+    }
+}
+```
 
 ### Step 1: Learning about Built-in Arrays
 
