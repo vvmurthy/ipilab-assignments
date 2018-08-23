@@ -1,7 +1,5 @@
 package assignment3;
 
-import com.sun.istack.internal.Pool;
-
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
